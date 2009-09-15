@@ -16,12 +16,12 @@ Hash: SHA1
 
 SHA1 a23b53937ca08205a974034a614ab25007d652fa MANIFEST
 SHA1 190e9058eb9c6446a1a3f3ddf15b082f1ecde152 MANIFEST.SKIP
-SHA1 872f85c23e1a758eeb379a2e86ba9ab5904cd06a META.yml
-SHA1 80e16c8fa853da66f74b2d8d41d270de110c2ead Makefile.PL
-SHA1 5b85e762197cc30f4b0f20cef3da6d5f93330dbc lib/Catalyst/Authentication/Store/Model/KiokuDB.pm
-SHA1 b7634d3e7c3379fc8c8ecaf370a610af71c414d7 lib/Catalyst/Authentication/Store/Model/KiokuDB/UserWrapper.pm
-SHA1 0423087e5fd13d4a0ad749b1875a2888720693a5 lib/Catalyst/Model/KiokuDB.pm
-SHA1 ccf6ffa18cb0772866c1c89c2c5ff134122c83d8 t/basic.t
+SHA1 cff7820f44b48cb2c6a7f8fc4bfd889c3f0bd5ad META.yml
+SHA1 d43c26ff1f786edf862cdba8df70d378d3e7533f Makefile.PL
+SHA1 5e7bab66a76727150a8b17867cffb07e52683c6d lib/Catalyst/Authentication/Store/Model/KiokuDB.pm
+SHA1 41ff56ae4a6b3fbe37293c1b2c049b0e5fe4d3a6 lib/Catalyst/Authentication/Store/Model/KiokuDB/UserWrapper.pm
+SHA1 afc059af964d7aeefec99bbc63c20e4ecfacb9eb lib/Catalyst/Model/KiokuDB.pm
+SHA1 4172a3a8c03df8166a19cf36986b969ab6f57088 t/basic.t
 SHA1 6bae3f39a197660841e9d6a939cd277ac08da8d9 t/lib/Catalyst/Model/KiokuDB/Test.pm
 SHA1 7598fcfa1ea0e0cc8e6ba249aa074321a1732594 t/lib/Catalyst/Model/KiokuDB/Test/Controller/Root.pm
 SHA1 7da68b89b8107b168d92a57e5984923e86e21e04 t/lib/Catalyst/Model/KiokuDB/Test/Model/KiokuDB.pm
@@ -29,7 +29,7 @@ SHA1 15c238b206d61ee86094b4159ce335725aa25f8d t/lib/Catalyst/Model/KiokuDB/Test/
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFJqXWUVCwRwOvSdBgRAqnyAKCCgr1ab/JYrbAaVrSo61clowiOUwCcD9eT
-5i9ANN8jcIMph7TthqZypYs=
-=RsQp
+iD8DBQFKr2WOVCwRwOvSdBgRAmOPAJ9/2Zd+bnCnebpcNet/ha2YEOI/hgCgt4cQ
+yLbvjKxojnhx4SoGVsdLQf8=
+=GAs0
 -----END PGP SIGNATURE-----

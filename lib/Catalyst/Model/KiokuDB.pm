@@ -12,22 +12,11 @@ sub format_table;
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 extends qw(Catalyst::Model);
 
 fieldhash my %scopes;
-
-if ($Catalyst::VERSION < 5.8 && !__PACKAGE__->isa('Moose::Object')) {
-    unshift our @ISA, 'Moose::Object';
-
-    no warnings 'once';
-    *BUILDARGS = sub {
-        my $self = shift;
-        my $arguments = ( ref( $_[-1] ) eq 'HASH' ) ? $_[-1] : {};
-        return $self->merge_config_hashes($self->config, $arguments);
-    }
-}
 
 sub ACCEPT_CONTEXT {
     my ($self, $c, @args) = @_;
@@ -65,7 +54,12 @@ has model_class => (
 sub BUILD {
     my ( $self, $params ) = @_;
 
-    $self->_model( $self->_new_model(%$params) );
+    # Don't pass Catalyst specific parameters into the model, as this will
+    # break things using MX::StrictConstructor
+    my %params = %$params;
+    delete $params{$_} for (grep { /^_?catalyst/ } keys %params);
+
+    $self->_model( $self->_new_model(%params) );
 }
 
 sub _new_model {
