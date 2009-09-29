@@ -12,7 +12,7 @@ sub format_table;
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = "0.03";
+our $VERSION = "0.10";
 
 extends qw(Catalyst::Model);
 
@@ -23,7 +23,7 @@ sub ACCEPT_CONTEXT {
 
     $self->save_scope($c) if $self->manage_scope;
 
-    return $self;
+    return $self->model;
 }
 
 has manage_scope => (
