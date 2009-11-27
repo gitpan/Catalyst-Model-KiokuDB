@@ -14,24 +14,22 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 7dca6295f1bb36b740a5bfa03b2bb132a361c8a5 .gitignore
-SHA1 b2b9e77364c710b7751054ad12f5fe5609230fe7 Changes
-SHA1 9afb489d3e373be31298d84c891b98ac4bbe8c25 MANIFEST
+SHA1 a23b53937ca08205a974034a614ab25007d652fa MANIFEST
 SHA1 190e9058eb9c6446a1a3f3ddf15b082f1ecde152 MANIFEST.SKIP
-SHA1 9f53e77fc866d4c3fc8684ceb8e4517690a5bd7a META.yml
+SHA1 31db00afd93e6abe71f7c17434d54549017d94a0 META.yml
 SHA1 d43c26ff1f786edf862cdba8df70d378d3e7533f Makefile.PL
 SHA1 20a3e40e4774ec112d3011a036dc4c4b8210d6d2 lib/Catalyst/Authentication/Store/Model/KiokuDB.pm
 SHA1 41ff56ae4a6b3fbe37293c1b2c049b0e5fe4d3a6 lib/Catalyst/Authentication/Store/Model/KiokuDB/UserWrapper.pm
-SHA1 0d3cf2942a5234a7750103e1f3d471c445ae1cec lib/Catalyst/Model/KiokuDB.pm
+SHA1 ad865f3eb497523102f75478d595eb0c35ecc9c7 lib/Catalyst/Model/KiokuDB.pm
 SHA1 2096ed2229e0ab56ec2dcea215be5e6835fcdadb t/basic.t
 SHA1 6bae3f39a197660841e9d6a939cd277ac08da8d9 t/lib/Catalyst/Model/KiokuDB/Test.pm
 SHA1 4b7cfe48c5e73460a022c7c2c01e26e0387476f8 t/lib/Catalyst/Model/KiokuDB/Test/Controller/Root.pm
-SHA1 7da68b89b8107b168d92a57e5984923e86e21e04 t/lib/Catalyst/Model/KiokuDB/Test/Model/KiokuDB.pm
+SHA1 121dbe83f4f473cf3af7124a5cf8cd8087438f2c t/lib/Catalyst/Model/KiokuDB/Test/Model/KiokuDB.pm
 SHA1 15c238b206d61ee86094b4159ce335725aa25f8d t/lib/Catalyst/Model/KiokuDB/Test/User.pm
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.9 (GNU/Linux)
+Version: GnuPG/MacGPG2 v2.0.12 (Darwin)
 
-iEYEARECAAYFAkrCTIsACgkQdC8qQo5jWl7x9ACfdHlJ+kFIIy1ua1FkkKW8McjI
-qskAn3Au4XQNnANAwlB1CmxAxo3l0buD
-=DyHy
+iEYEARECAAYFAksP6z4ACgkQVCwRwOvSdBhf3ACdHyXjEj5QhTvDxfiDgwskCBLK
+sXEAnjxC/vyP5tpsdR0IFzloQbD3NGfL
+=dguF
 -----END PGP SIGNATURE-----

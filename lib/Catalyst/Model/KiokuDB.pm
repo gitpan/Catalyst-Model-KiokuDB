@@ -12,7 +12,7 @@ sub format_table;
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = "0.10";
+our $VERSION = "0.11";
 
 extends qw(Catalyst::Model);
 
@@ -41,6 +41,7 @@ has clear_leaks => (
 has model => (
     isa => "KiokuX::Model",
     is  => "ro",
+    predicate => "has_model",
     writer => "_model",
     handles => "KiokuDB::Role::API",
 );
@@ -51,15 +52,41 @@ has model_class => (
     default => "KiokuX::Model",
 );
 
+has model_args => (
+    isa     => "HashRef",
+    is      => "ro",
+    default => sub { +{} },
+);
+
+has dsn => (
+    is => "ro",
+    predicate => "has_dsn",
+);
+
 sub BUILD {
     my ( $self, $params ) = @_;
 
-    # Don't pass Catalyst specific parameters into the model, as this will
-    # break things using MX::StrictConstructor
-    my %params = %$params;
-    delete $params{$_} for (grep { /^_?catalyst/ } keys %params);
+    unless ( $self->has_model ) {
+        # Don't pass Catalyst specific parameters into the model, as this will
+        # break things using MX::StrictConstructor
+        my %params = %$params;
+        delete $params{$_} for (grep { /^_?catalyst/ } keys %params);
 
-    $self->_model( $self->_new_model(%params) );
+        # don't pass parameters to our constructor
+        delete @params{grep { defined } map { $_->init_arg } $self->meta->get_all_attributes};
+
+        if ( scalar keys %params ) {
+            carp("Passing extra parameters to the constructor is deprecated, please use model_args");
+        }
+
+        $self->_model(
+            $self->_new_model(
+                $self->has_dsn ? ( dsn => $self->dsn ) : (),
+                %params,
+                %{ $self->model_args }
+            ),
+        );
+    }
 }
 
 sub _new_model {

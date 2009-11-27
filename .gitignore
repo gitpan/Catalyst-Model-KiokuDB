@@ -1,7 +1,0 @@
-Makefile
-blib
-pm_to_blib
-MANIFEST
-Makefile.old
-inc
-Catalyst-Model-KiokuDB-*
