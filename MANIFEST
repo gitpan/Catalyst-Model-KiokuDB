@@ -1,3 +1,5 @@
+.gitignore
+Changes
 lib/Catalyst/Authentication/Store/Model/KiokuDB.pm
 lib/Catalyst/Authentication/Store/Model/KiokuDB/UserWrapper.pm
 lib/Catalyst/Model/KiokuDB.pm
